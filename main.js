@@ -1,10 +1,15 @@
-var palabras = ['kinal',
+const palabras = ['kinal',
                 'hola',
                 'ultimo',
                 'graduacion'];
 
-var numeroPalabra = Math.lengt(Math.random = palabras.length);
+const numeroPalabra = Math.lengt(Math.floor = palabras.length);
+let intentos = 7;
+let letrasPalabra = Array(numeroPalabra.length).fill("_");
 
 palabraMisterio = document.getElementById('palabraAdivinar');
 letraIngresada = document.getElementById('letraIngresada');
 personaje = document.getElementById('personajeAhorcado');
+
+letrasPalabra = palabraMisterio;
+
