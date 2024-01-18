@@ -1,22 +1,27 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <meta charset='utf-8'>
-    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
-    <title>Ahoracado 2024</title>
-    <meta name='viewport' content='width=device-width, initial-scale=1'>
-    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
-    <script src='main.js'></script>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>AHORCADO 2024</title>
+	<link rel="stylesheet" type="text/css" href="main.css">
+	<link rel="icon" href="Image//logo.png">
+	<script src="main.js" defer></script>
 </head>
 <body>
     <h1>JUEGO DE AHORCADO</h1>
-    <div id="palabraAdivinar"></div>    
-    <p>Intentos:<span id="oportunidades"></span></p>
-    <div id="teclado">
-        <input type="text" placeholder="Ingrese una letra" id="entradaTecla">
-        <div id="teclado"></div>
-        <div id="miModal"></div>
+	<div id="visualizacion-palabra" class="cajaPalabra"></div>
+    <p class="intentos">Intentos restantes: <span id="intentos-restantes"></span></p>
+        	<div class="cajaTeclado">
+	            <canvas id="ahorcado">Al parecer ha ocurrido un problema con la grafica, pruebe intentando nuevamente</canvas>
+	        	<input type="text" id="entrada-tecla" class="entradaTexto" placeholder="Ingresa una letra" />
+	        	<div class="teclado" id="teclado"></div>
+	        	<div class="modal" id="miModal">
+	            <div class="modal-contenido">
+	                <p id="mensaje-modal"></p>
     </div>
-    <canvas id="personajeAhorcado"></canvas>
+    </div>
+    </div>
+    </div>
 </body>
 </html>
