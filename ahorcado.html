@@ -10,8 +10,13 @@
 </head>
 <body>
     <h1>JUEGO DE AHORCADO</h1>
-    <H3 id="palabraAdivinar"></H3>
-    <input type="text" id="letraIngresada">
+    <div id="palabraAdivinar"></div>    
+    <p>Intentos:<span id="oportunidades"></span></p>
+    <div id="teclado">
+        <input type="text" placeholder="Ingrese una letra" id="entradaTecla">
+        <div id="teclado"></div>
+        <div id="miModal"></div>
+    </div>
     <canvas id="personajeAhorcado"></canvas>
 </body>
 </html>
