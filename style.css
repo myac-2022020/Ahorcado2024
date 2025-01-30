@@ -1,0 +1,117 @@
+body{
+    background-color: #001B49;
+}
+*{
+    font-family: 'Black Ops One', sans-serif;
+                                                
+}
+#visualizacion-palabra{
+    border-top: .5em solid #001B49;
+    display: grid;
+    place-items: center;
+}
+.cajaTeclado{
+    width: 40vw;
+    height: 30vh;
+    border-bottom: 1em solid #001B49;
+}
+.cajaPalabra{
+    color: #FFFFFF;
+    font-size: 2em;
+}
+.intentos{
+    color: #FFFFFF;
+    font-size: 1.5em;
+}
+.teclado {
+    border-top: .5em solid #001B49;
+    display: grid;
+    grid-template-columns: repeat(10, 1fr);
+    gap: .2em;
+    padding-top: 1em;
+    border-bottom: 1em solid #001B49;
+}
+.tecla {
+    width: 2em;
+    height: 2em;
+    text-align: center;
+    border: .6em solid #001B49;
+    line-height: 2em;
+    background-color: #eee;
+    cursor: pointer;
+}
+.boton {
+    display: inline-block;
+    width: 15vw;
+    height: 8vh;
+    background-color: #00F000;
+    color: #000000;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+#ahorcado{
+    border-left: 10em solid #001B49;
+}
+
+.boton:hover {
+    background-color: #00FF00;
+    color: #000000;
+}
+.entradaTexto{
+    border: 0.1em solid #0000FF;
+    text-align: center;
+    border-radius: 0.5em;
+    width: 20vw;
+    height: 5vh;
+}
+.entradaTexto:hover{
+    border-color: #000000;
+}
+
+#ahorcado{
+    border-bottom: 1em solid #001B49;
+}
+
+.botonJugar{
+    width: 23vw;
+    height: 10vh;
+    background-color: #00BF39;
+    border-radius: 1em;
+    transition: 0.5s;
+    color: #000000;
+ }
+
+.botonJugar:hover{
+    width: 25vw;
+    height: 11vh;
+    background-color: #00FF00;
+    border-radius: 1em;
+    color: #FFFF00;
+}
+
+a:active{
+    color: #0000FF;
+}
+
+.linkPagina{
+    font-size: 2em;
+}
+
+.gifAhorcado{
+    width: 40vw;
+    height: 55vh;
+}
+
+a{
+    text-decoration: none;
+}
+
+.cajaAhorcado{
+    width: 99vw;
+    height: 35vh
+    border-color #FFFFFF;
+}
