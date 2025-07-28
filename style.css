@@ -40,7 +40,7 @@ body{
     background-color: #eee;
     cursor: pointer;
 }
-.boton {
+.resetButton {
     display: inline-block;
     width: 15vw;
     height: 8vh;
@@ -53,11 +53,7 @@ body{
     transition: background-color 0.3s;
 }
 
-#ahorcado{
-    border-left: 10em solid #001B49;
-}
-
-.boton:hover {
+.resetButton:hover {
     background-color: #00FF00;
     color: #000000;
 }
@@ -73,45 +69,123 @@ body{
 }
 
 #ahorcado{
-    border-bottom: 1em solid #001B49;
+    border: 1em solid rgba(255, 255, 255, 0);
+    border-left: 4em solid rgba(255, 255, 255, 0);
+    display: grid;
+    place-items: center;
+    margin: 0 auto;
 }
 
-.botonJugar{
-    width: 23vw;
-    height: 10vh;
-    background-color: #00BF39;
-    border-radius: 1em;
-    transition: 0.5s;
-    color: #000000;
- }
-
-.botonJugar:hover{
-    width: 25vw;
-    height: 11vh;
-    background-color: #00FF00;
-    border-radius: 1em;
-    color: #FFFF00;
+@media (max-width: 600px) {
+    .cajaTeclado{
+        width: 100%;
+        height: auto;
+    }
+    .cajaPalabra{
+        font-size: 2em;
+    }
+    .cajaTeclado{
+        width: 85%;
+        height: auto;
+    }
+    .entradaTexto{
+        width: 70%;
+        
+    }
+    .tecla{
+        width: 1.5em;
+        height: 1.5em;
+        border: 2em;
+        text-align: center;
+    }
+    .resetButton{
+        width: 50%;
+        margin-top: 10%;
+    }
 }
 
-a:active{
-    color: #0000FF;
+.titleGame{
+    font-family: 'Black Ops One', sans-serif;
+    color: #fff;
+    text-align: center;
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.7),
+                0 0 20px rgba(255, 255, 255, 0.5),
+                0 0 30px rgba(255, 255, 255, 0.3);
+    margin: 10% 0 10% 0;
+    font-size: 4vw;    
 }
 
-.linkPagina{
-    font-size: 2em;
+.buttonGame{
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    width: 20vw;
+    height: 8vh;
+    background-color: #00F000;
+    border-radius: 8px;
+    border-color: #00F000;
 }
 
-.gifAhorcado{
-    width: 40vw;
-    height: 55vh;
-}
-
-a{
+.gameLink{
     text-decoration: none;
+    color: #002afe;
+    margin: 0 auto;
+    transition-duration: 1s;
+}
+
+.gameLink:hover{
+    color: #ff0000;
+}
+
+@media (max-width: 600px) {
+    .titleGame {
+        font-size: 8vw;
+        margin: 40% 0 40% 0;
+    }
+    .buttonGame {
+        width: 50vw;
+        height: 7vh;
+    }
+    .gameLink {
+        font-size: 100%;
+    }
 }
 
 .cajaAhorcado{
     width: 99vw;
     height: 35vh
     border-color #FFFFFF;
+}
+#myModal{
+    display: none;
+    position:fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    justify-content: center;
+    align-items: center;
+}
+
+#modelContent{
+    display: grid;
+    place-items: center;;
+    background: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+}
+
+.textMessage{
+    color: #fff;
+}
+
+#closeModal{
+    margin-top: 10px;
+    cursor: pointer;
+    background: #f00;
+    color: #fff;
+    border: none;
+    padding: 5px 10px;
 }

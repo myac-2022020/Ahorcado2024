@@ -31,8 +31,6 @@ const visualizacionPalabra = document.getElementById("visualizacion-palabra");
 const intentosRestantesDisplay = document.getElementById("intentos-restantes");
 const entradaTecla = document.getElementById("entrada-tecla");
 const tecladoContenedor = document.getElementById("teclado");
-const modal = document.getElementById("miModal");
-const mensajeModal = document.getElementById("mensaje-modal");
 const recargar = document.getElementById("recargarPagina");
 const canvas = document.getElementById("ahorcado");
 const letrasUtilizadas = {};
@@ -47,9 +45,6 @@ recargar.style.display = "none";
 textoGanador.style.display = "none";
 textoPerdedor.style.display = "none";
 
-//Pantalla ganador y perdedor deshabilitadas
-ganador.style.display = "none";
-perdedor.style.display = "none"
 
 // Dibujar el palo del ahorcado
 canvas.width = 300;
@@ -88,7 +83,19 @@ for (const letra of alfabeto) {
 function actualizarVisualizacion() {
     visualizacionPalabra.textContent = palabraAdivinada.join(" ");
     intentosRestantesDisplay.textContent = intentosRestantes;
-}        
+}
+
+function mostrarMensaje(mensaje){
+    document.getElementById("modalMessage").textContent = mensaje
+    document.getElementById("myModal").style.display = "block"
+}
+
+document.getElementById("closeModal").addEventListener("click", () => {
+    document.getElementById("myModal").style.display = "none"
+})
+
+
+
 // Función para manejar teclas del input y ver que el caracter ingresado sea valido
 function manejarTecla() {
     const tecla = entradaTecla.value.toLowerCase();
@@ -100,7 +107,7 @@ function manejarTecla() {
     }
     //Ver si la letra ingfesada ya ha sido utilizada
     if(letrasUtilizadas[tecla]){
-        alert("Ya has utilizado esta letra, prueba con otra");
+        mostrarMensaje("Esa letra ya se ha usado, prueba con otra.");
         return;
     }
     letrasUtilizadas[tecla] = true;
@@ -151,7 +158,6 @@ function manejarTecla() {
     // Si la palabra es completada, se lenzara este mensaje     
     if (palabraAdivinada.join("") === palabraAleatoria) {
         textoGanador.style.display = "block"
-        ganador.style.display = "block";
         recargar.style.display = "block";
         tecladoContenedor.style.display = "none";
         entradaTecla.style.display = "none";
@@ -164,7 +170,6 @@ function manejarTecla() {
         ctx.fillRect(145,50,5,5);
         ctx.fillRect(160,50,5,5);
         ctx.fillRect(145,65,20,5);
-        perdedor.style.display = "block";
         textoPerdedor.style.display = "block";
         palabraNoAdivinada.textContent = palabraAleatoria;
         recargar.style.display = "block";

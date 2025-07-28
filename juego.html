@@ -11,22 +11,21 @@
 	<script src="script.js" defer></script>
 </head>
 <body>
-	<img src="Image//ganaste.gif" style="position:absolute; z-index: 2; width: 99vw; height: 96vh;" id="ganador">
-	<img src="Image//perdiste.gif" style="position: absolute; z-index: 2; width: 89vw; height: 86vh; left: 50%; top: 50%; transform: translate(-50%, -50%);" id="perdedor">
     <div id="visualizacion-palabra" class="cajaPalabra"></div>
     <p class="intentos">Intentos restantes: <span id="intentos-restantes"></span></p>
         <center>
         	<div class="cajaTeclado">
 	            <canvas id="ahorcado">Al parecer ha ocurrido un problema con la grafica, pruebe intentando nuevamente</canvas>
 	        	<input type="text" id="entrada-tecla" class="entradaTexto" placeholder="Ingresa una letra" />
-	        	<div class="teclado" id="teclado"></div>
-	        	<div class="modal" id="miModal">
-	            <div class="modal-contenido">
-	                <p id="mensaje-modal"></p>
-	            </div>
+	        	<div class="teclado" translate="no" id="teclado"></div>
+	        	<div class="modal" id="myModal">
+					<div id="modalContent">
+						<p class="textMessage" id="modalMessage"></p>
+						<button id="closeModal">Cerrar</button>
+					</div>
 	            <H2 id="textoGanador" style="color:#FFFFFF; border-bottom: 1em solid #001B49;">Felicidades, campeón!!</H2>
 				<H2 id="textoPerdedor" style="color:#FFFFFF; border-bottom: 1em solid #001B49;">Perdiste, la palabra era: <span id="palabraNoAdivinada"></span></H2>
-				<button class="boton" id="recargarPagina" style="position:absolute;z-index:3;top: 75%;left: 50%;transform: translate(-50%, -50%);">Volver a jugar</button>
+				<button class="resetButton" id="recargarPagina" style="position:absolute;z-index:3;top: 75%;left: 50%;transform: translate(-50%, -50%);">Volver a jugar</button>
 	        </div>
         </center>
     </div>
